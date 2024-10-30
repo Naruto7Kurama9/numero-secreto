@@ -11,27 +11,18 @@ function exibirTextoNaTela(tag, texto) {
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    console.log(numeroSecreto);
 
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
         exibirTextoNaTela('p', 'Meus parabéns, clique em novo jogo e volte a brincar!');
         document.getElementById('reiniciar').removeAttribute('disabled');
-<<<<<<< HEAD
-        document.getElementById('verificarChute').removeAttribute('disabled');
-=======
-        document.getElementById('chute').setAttribute('disabled', true)
->>>>>>> 86ef1fab187ea57e7a2fb0f8566509a5906a6be9
+        document.getElementById('chute').setAttribute('disabled', true);
 
     } else if (tentativas == 2) {
         exibirTextoNaTela('h1', 'Errou! Número máximo de tentativas é 2');
         exibirTextoNaTela('p', 'O número secreto era: ' + numeroSecreto);
         document.getElementById('reiniciar').removeAttribute('disabled');
-<<<<<<< HEAD
-        document.getElementById('verificarChute').removeAttribute('disabled');
-=======
-        document.getElementById('chute').setAttribute('disabled', true)
->>>>>>> 86ef1fab187ea57e7a2fb0f8566509a5906a6be9
+        document.getElementById('chute').setAttribute('disabled', true);
 
     } else {
         if (chute > numeroSecreto) {
@@ -62,7 +53,7 @@ function gerarNumeroAleatorio() {
 }
 
 function limparCampo() {
-    chute = document.querySelector('input');
+    let chute = document.querySelector('input');
     chute.value = '';
 }
 
@@ -72,12 +63,7 @@ function reiniciarJogo() {
     tentativas = 1;
     exibirTextoNaTela('h1', 'Adivinhe o <span class="container__texto-azul">numero secreto</span>');
     exibirTextoNaTela('p', 'Escolha um número entre 1 a 10');
-    document.getElementById('reiniciar').setAttribute('disabled', true)
+    document.getElementById('reiniciar').setAttribute('disabled', true);
+    document.getElementById('chute').removeAttribute('disabled');
 }
-
-
-
-
-
-
 
